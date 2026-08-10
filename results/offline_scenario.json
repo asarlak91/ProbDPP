@@ -1,0 +1,43 @@
+{
+  "n": 10,
+  "k": 3,
+  "epsilon": 0.6,
+  "num_questions": 1000,
+  "num_seeds": 20,
+  "alpha_vector": [
+    0.7,
+    0.9,
+    0.05,
+    0.75,
+    0.65,
+    0.99,
+    0.9,
+    0.8,
+    0.45,
+    0.79
+  ],
+  "alpha_mean": 0.6980000000000001,
+  "correlated_groups": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  ],
+  "correlated_generator": "For each group sample one shared Uniform(0,1); set z_i=1 if u_group < alpha_i",
+  "failure_modes": [
+    "independent",
+    "correlated"
+  ],
+  "candidate_shuffle": true,
+  "candidate_seed": 12345
+}

@@ -1,0 +1,96 @@
+{
+  "n": 10,
+  "k": 3,
+  "epsilon": 0.6,
+  "num_questions": 600,
+  "num_seeds": 30,
+  "change_point": 300,
+  "block_size": 10,
+  "adaptive_window": 100,
+  "alpha_before": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.9,
+    0.7,
+    0.5,
+    0.4,
+    0.3,
+    0.2
+  ],
+  "alpha_before_mean": 0.7,
+  "severity_deltas": {
+    "slight": 0.050000000000000024,
+    "moderate": 0.14999999999999997,
+    "large": 0.29999999999999993,
+    "extreme": 0.5
+  },
+  "alpha_after": {
+    "slight": [
+      0.9285714285714286,
+      0.9375,
+      0.9464285714285714,
+      0.9553571428571428,
+      0.8821428571428571,
+      0.7178571428571429,
+      0.5446428571428571,
+      0.4535714285714286,
+      0.3625,
+      0.27142857142857146
+    ],
+    "moderate": [
+      0.7857142857142858,
+      0.8125,
+      0.8392857142857144,
+      0.8660714285714286,
+      0.8464285714285715,
+      0.7535714285714287,
+      0.6339285714285714,
+      0.5607142857142857,
+      0.48750000000000004,
+      0.41428571428571426
+    ],
+    "large": [
+      0.5714285714285714,
+      0.625,
+      0.6785714285714286,
+      0.7321428571428572,
+      0.7928571428571428,
+      0.8071428571428572,
+      0.7678571428571428,
+      0.7214285714285714,
+      0.675,
+      0.6285714285714286
+    ],
+    "extreme": [
+      0.2857142857142858,
+      0.37500000000000006,
+      0.46428571428571436,
+      0.5535714285714286,
+      0.7214285714285714,
+      0.8785714285714286,
+      0.9464285714285714,
+      0.9357142857142857,
+      0.9249999999999999,
+      0.9142857142857143
+    ]
+  },
+  "alpha_after_means": {
+    "slight": 0.7,
+    "moderate": 0.7000000000000001,
+    "large": 0.7,
+    "extreme": 0.7000000000000001
+  },
+  "severity_construction": "alpha_after=(1-lambda)*alpha_before + lambda*reverse(alpha_before), with lambda selected to achieve the requested mean absolute Delta_alpha; this preserves mean reliability.",
+  "methods": [
+    "static_probdpp",
+    "online_probdpp",
+    "adaptive_probdpp",
+    "oracle_probdpp"
+  ],
+  "candidate_shuffle": true,
+  "candidate_seed": 12345,
+  "online_note": "Online ProbDPP uses all-history KL-UCB.",
+  "adaptive_note": "Adaptive ProbDPP uses sliding-window KL-UCB as an empirical nonstationary extension; it is not covered by the stationary regret theorem."
+}

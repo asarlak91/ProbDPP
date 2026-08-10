@@ -1,0 +1,6 @@
+numpy>=1.24
+requests>=2.31
+datasets>=2.18
+sentence-transformers>=2.6
+bert-score>=0.3.13
+matplotlib>=3.7
