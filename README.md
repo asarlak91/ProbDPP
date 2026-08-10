@@ -1,5 +1,14 @@
 # Reliability-Aware Determinantal Point Processes for Robust Informative Data Selection in Large Language Models
 
+## Paper
+
+This repository provides the implementation and selected experiments accompanying our paper:
+
+**Reliability-Aware Determinantal Point Processes for Robust Informative Data Selection in Large Language Models**
+
+
+https://doi.org/10.48550/arXiv.2602.00885
+
 A compact research implementation of **ProbDPP** for selecting diverse LLM context under unreliable data access. This repository provides code for two core experiments:
 
 1. **Known-reliability robustness:** heterogeneous source reliabilities under independent and correlated failures.
