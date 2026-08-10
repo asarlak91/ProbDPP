@@ -1,30 +1,3 @@
-#!/usr/bin/env python3
-"""ProbDPP HotpotQA experiments with heterogeneous source reliabilities.
-
-This version intentionally removes homogeneous reliability experiments.
-Every source has its own marginal reliability in every failure mode.
-
-Default source reliabilities (mean approximately 0.70):
-    [0.70,0.90,0.05,0.75,0.65,0.99,0.9,0.80,0.45,0.79]
-
-Failure modes
--------------
-independent:
-    z_i ~ Bernoulli(alpha_i) independently.
-
-correlated:
-    Sources 1-5 share one Uniform(0,1) latent variable and sources 6-10
-    share another. Within each group, z_i = 1{u_group < alpha_i}. This
-    preserves every source marginal P(z_i=1)=alpha_i while introducing
-    positive within-group correlation.
-
-Methods
--------
-    probdpp, kdpp, highest_alpha, random
-
-The code performs exact search over all C(10,3)=120 subsets.
-"""
-
 from __future__ import annotations
 
 import argparse
